@@ -53,22 +53,23 @@ const styles = theme => ({
   },
   deleteButtonExpanded: {
     // borderBottom: `${theme.spacing.unit * 2}px solid`,
-    // transition: 'border-bottom-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 300ms',
     '&:after': {
       width: 0,
       height: 0,
       borderLeft: `${theme.spacing.unit * 2}px solid transparent`,
       borderRight: `${theme.spacing.unit * 2}px solid transparent`,
-      borderBottom: `${theme.spacing.unit * 2}px solid ${
-        theme.palette.grey['800']
-      }`,
+      borderBottom: `${theme.spacing.unit * 2}px solid ${theme.palette.grey['800']}`,
       position: 'absolute',
       content: "''",
       left: '35%',
       top: '100%',
       clear: 'both',
-      // transition:
-      //   'border-bottom-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 300ms',
+      transition: 'border-bottom-height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+    },
+    '&:hover': {
+      '&:after': {
+        'border-bottom-height': '0px',
+      },
     },
   },
   deleteButtonFailed: {
